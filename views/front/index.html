@@ -46,7 +46,7 @@
                         <span>
                           <a class="article-author"><%= blogs[i].username %></a>
                         </span><span>
-                          <a class="article-comments-num disqus-comment-count" data-disqus-url="<%=website.domain%>/article/av<%= blogs[i].id %>" href="/article/av<%= blogs[i].id %>#disqus_thread" data-pjax="true">0 Comments</a>
+                          <a class="article-comments-num ds-thread-count" data-thread-key="<%=blogs[i].id%>" data-count-type="comments" data-pjax="true">0 Comments</a>
                         </span><span>
                           <a class="article-view-num"><%= blogs[i].view_num %> Views</a>
                         </span><span>
@@ -101,7 +101,8 @@
     <script src="/javascripts/libs/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="/javascripts/common/util.js"></script>
     <script type="text/javascript" src="/javascripts/front/index.js"></script>
-    <script id="dsq-count-scr" src="//coolecho.disqus.com/count.js" async></script>
+    <script>var duoshuoQuery = {short_name:"cononico"};</script>
+    <script src="/javascripts/duoshuo/embed.js"></script>
     <script src="/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
     <script src="/javascripts/libs/jquery.pjax.js"></script>
     <script src="/javascripts/front/pjax-loading.js"></script>

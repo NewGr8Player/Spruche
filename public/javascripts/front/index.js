@@ -42,8 +42,8 @@
                         htmlStr += '<li class="article-li"><article><div class="article-info-div"><div class="article-user-img-div float-left"><img src="'+
                             blogs[b].head_img+'"></div><div class="vertical-line-div float-left"><div class="vertical-line"></div></div><div class="article-info float-left">'+
                             '<h3 class="article-title-h"><span class="shine-font-span"></span><a href="/article/av'+blogs[b].id+'" data-pjax="true">'+blogs[b].title+'</a>'+
-                            '</h3> <div class="article-other-info"><span><a class="article-author">'+blogs[b].username+'</a></span><span><a class="article-comments-num disqus-comment-count" data-disqus-url="'+PATH+
-                            blogs[b].id+'" href="'+PATH+blogs[b].id+'#disqus_thread" data-pjax="true">0 Comments</a></span><span><a class="article-view-num">'+blogs[b].view_num+' Views</a></span><span><a class="article-date">'+
+                            '</h3> <div class="article-other-info"><span><a class="article-author">'+blogs[b].username+'</a></span><span><a class="article-comments-num ds-thread-count" data-thread-key="'+
+                            blogs[b].id+'" data-count-type="comments" data-pjax="true">0 Comments</a></span><span><a class="article-view-num">'+blogs[b].view_num+' Views</a></span><span><a class="article-date">'+
                             (new Date(blogs[b].publish_date)).getFullYear()+'-'+((new Date(blogs[b].publish_date)).getMonth()+1)+'-'+(new Date(blogs[b].publish_date)).getDate()+'</a></span></div></div>'+
                             '<div class="clearfix"></div></div>';
 
@@ -71,7 +71,7 @@
                         $('#load-more-btn-div-cnt').css('display','inline-block');
                     }
                     showArticle();
-                    getCommentCount();
+                    DUOSHUO.ThreadCount($('.ds-thread-count'));
                 }
                 else{
                     myAlert('网络繁忙，请稍后再试...');

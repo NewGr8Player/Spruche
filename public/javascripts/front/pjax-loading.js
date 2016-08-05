@@ -23,5 +23,6 @@ $(document).on('pjax:end', function() {
           });
       }
   });
-  getCommentCount();
+  pajx_loadDuodshuo();
+  DUOSHUO.ThreadCount($('.ds-thread-count'));
 });
