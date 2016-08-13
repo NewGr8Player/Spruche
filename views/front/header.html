@@ -13,11 +13,13 @@
             <a href="http://www.coolecho.net">
                 <li class="nav_ul_li">About</li>
             </a>
-            <li class="nav_ul_li">Friends</li>
+            <a href="/friendslink" data-pjax="true"> 
+                <li class="nav_ul_li">Friends</li>
+            </a>
             <a href="/messageboard" data-pjax="true"> 
                 <li class="nav_ul_li">Tucao</li>
             </a>
-            <li class="nav_ul_li">Article</li>
+            <li class="nav_ul_li" style="cursor:not-allowed;">Search</li>
             <a href="/">
                 <li class="nav_li_on nav_ul_li">Home</li>
             </a>
@@ -33,7 +35,7 @@
 <header class="mobile-head-main">
     <div class="mobile-menu">
         <a class="get-menu-icon" id="get-menu-icon"></a>
-        <h3 class="website-h3"><%=website.name%></h3>
+        <h3 class="website-h3"><%if(typeof website === "undefined"){%>Spruche<%}else{%><%=website.name%><%}%></h3>
         <a class="home-menu-icon" href="/"></a>
     </div>
 
@@ -49,11 +51,13 @@
                     <a href="/">
                         <li class="nav_li_on nav_ul_li">Home</li>
                     </a>
-                    <li class="nav_ul_li">Article</li>
+                    <li class="nav_ul_li" style="cursor:not-allowed;">Search</li>
                     <a href="/messageboard" data-pjax="true"> 
                         <li class="nav_ul_li">Tucao</li>
                     </a>
-                    <li class="nav_ul_li">Friends</li>
+                    <a href="/friendslink" data-pjax="true"> 
+                        <li class="nav_ul_li">Friends</li>
+                    </a>
                     <a href="http://www.coolecho.net">
                         <li class="nav_ul_li">About</li>
                     </a>
