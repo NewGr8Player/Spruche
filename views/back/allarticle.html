@@ -25,7 +25,7 @@
     <div class="wirte-content">
         <ul>
             <% for(var i in blogs){ %>
-            <div class="panel panel-default">
+            <li class="panel panel-default">
                 <div class="panel-heading">
                     <%=blogs[i].id%>.<a href="/article/av<%=blogs[i].id%>" target="_blank"><%=blogs[i].title%></a>
                 </div>
@@ -34,7 +34,7 @@
                         <a class="article-author"><%=blogs[i].username%></a>
                     </span>
                     <span>
-                        <a class="article-comments-num  ds-thread-count" data-thread-key="<%=blogs[i].id%>" data-count-type="comments">0 Comments</a>
+                        <a class="article-comments-num ds-thread-count" data-thread-key="//article/av<%=blogs[i].id%>" data-count-type="comments">0 Comments</a>
                     </span>
                     <span>
                         <a class="article-view-num"><%=blogs[i].view_num%> Views</a>
@@ -49,13 +49,16 @@
                         <a class="article_delete" data-id="<%=blogs[i].id%>">删除</a>
                     </span>
                 </div>
-            </div>
+            </li>
             <%}%>
         </ul>
     </div>
 
     <script src="/javascripts/libs/jquery-2.1.4.min.js"></script>
     <script src="/javascripts/libs/bootstrap.min.js"></script>
-    <script id="dsq-count-scr" src="//coolecho.disqus.com/count.js" async=""></script>
+    <script src="/javascripts/back/allarticle.js"></script>
+    <!--<script id="dsq-count-scr" src="//coolecho.disqus.com/count.js" async=""></script>-->
+    <script>var duoshuoQuery = {short_name:"cononico"};</script>
+    <script src="/javascripts/duoshuo/embed.js"></script>
 </body>
 </html>
