@@ -165,7 +165,7 @@ router.post('/ulogin', function (req, res, next) {
 router.get('/messageboard', function (req, res, next) {
   websiteDao.getWebSite()
     .then(function (result) {
-      res.renderPjax('front/messageboard', { website: result });
+      res.renderPjax('front/messageboard', { website: result[0] });
     })
     .catch(function (error) {
       res.render('error', { message: 404, error: error });
@@ -176,7 +176,7 @@ router.get('/messageboard', function (req, res, next) {
 router.get('/friendslink', function (req, res, next) {
   websiteDao.getWebSite()
     .then(function (result) {
-      res.renderPjax('front/friendslink', { website: result });
+      res.renderPjax('front/friendslink', { website: result[0] });
     })
     .catch(function (error) {
       res.render('error', { message: 404, error: error });
